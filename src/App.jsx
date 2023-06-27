@@ -9,26 +9,16 @@ import Form from "./card2";
 
 function App() {
   // const [count, setCount] = useState(0)
-  const handlerClick =(e)=>{
-    alert("it's submitted")
+  const handlerClick = (e) => {
+    alert("it's submitted");
     e.preventDefault();
-    console.log(e)
-    
-  }
+    console.log(e);
+  };
 
   return (
     <>
       {/* <Heading name ="das" age = '25'/> */}
       <Heading name="saurav" age="20" />
-
-      <Cards>
-        <Heading name="jay" age="26" />
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Voluptatibus, et numquam. Quaerat!
-        </p>
-      </Cards>
-
       <Cards>
         <Heading name="jay" age="26" />
         <img
@@ -49,18 +39,23 @@ function App() {
       <Form>
         <label>Phone number:</label>
         <br />
-        <input type="number" onChange={(e)=>{
-          console.log(e.target.value)
-        }} />
+        <input
+          type="number"
+          onChange={(e) => {
+            console.log(e.target.value);
+          }}
+        />
         <br />
-        <label >Pincode:</label>
+        <label>Pincode:</label>
         <br />
         <input type="number" />
         <br />
         <label>City:</label>
         <br />
         <input type="text" />
-        <button type="submit" onClick={handlerClick}>submit</button>
+        <button type="submit" onClick={handlerClick}>
+          submit
+        </button>
       </Form>
     </>
   );
